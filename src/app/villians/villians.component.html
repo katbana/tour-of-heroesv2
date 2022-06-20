@@ -1,0 +1,23 @@
+<!-- <script src="//code.angularjs.org/snapshot/angular.min.js"></script> -->
+<h1>{{title}}</h1>
+<div  *ngIf="villians">
+        <div  *ngFor="let villian of villians">
+              <a routerLink="/villiandetail/{{villian.id}}" class="columnNames" >
+                {{villian.name}}
+              </a> 
+              <a routerLink="/villiandetail/{{villian.id}}" class="columns" >
+               Power Level: {{villian.power}}
+              </a> 
+              <a class="columns"  (click)="delete(villian)">
+               x
+               </a>   
+          </div>
+</div>
+
+<div>
+<label for="newVillian">Villian:</label>
+<input id="newVillian" #villianName/><br><br>
+<label for="powerRange">Power:</label>
+<input type="range" name="powerRange" min="0"  max="10" #villianPower><br/><br/>
+<button type="button" (click)="add(villianName.value,villianPower.value);villianName.value=''">Add Villian</button>
+</div>

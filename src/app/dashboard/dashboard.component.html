@@ -1,0 +1,38 @@
+<h2>Top Heroes</h2>
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes"
+    routerLink="/detail/{{hero.id}}">
+    {{hero.h_name}}
+  </a>
+</div>
+<h2>Top Villians</h2>
+ <div class="heroes-menu">
+  <a *ngFor="let villian of villians"
+    routerLink="/villiandetail/{{villian.id}}">
+    <span title="power rating:{{villian.power}}" >{{villian.name}}  </span>
+  </a> 
+</div>
+
+<!-- <div *ngIf="joinedWithObjectForm$">
+  <div *ngFor="let hero of joinedWithObjectForm$ | keyvalue | async; let i = index">
+   
+    {{hero.key}} 
+  </div>
+</div> -->
+
+
+<!-- <h2>Heros & Villians</h2>
+<div class="heroes-menu"  *ngFor="let relation of relations">
+  <a class="columns"
+    routerLink="/detail/{{relation.hero.id}}">
+    {{relation.hero.name}}
+  </a>
+  <a class="columns"
+    routerLink="/villiandetail/{{relation.villian.id}}">
+    {{relation.villian.name}}
+  </a>
+  <a class="columns" [style.background]="relation.hero.h_power > relation.villian.power ? 'green' : 'red'"
+    routerLink="#"  >
+    {{relation.hero.h_power > relation.villian.power ? 'The world is in safe hands' : 'The world is doomed!'}}
+  </a>
+</div>  -->

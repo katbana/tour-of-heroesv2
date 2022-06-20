@@ -1,0 +1,39 @@
+<h2>My Heroes</h2>
+<!-- <ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a> 
+    <a class="deleteHero" (click)="delete(hero)">
+      delete
+    </a> 
+  </li>
+</ul>
+
+<div>
+  <label for="new-hero">Hero name:</label>
+  <input id="new-hero" #heroName/>
+
+  <button type="button" class="add-button" (click)="add(heroName.value);heroName.value=''">Add Hero</button>
+</div> -->
+
+
+<div  *ngIf="heroes">
+  <div  *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}" class="columnNames" >
+          {{hero.h_name}}
+        </a> 
+        <a routerLink="/detail/{{hero.id}}" class="columns" >
+         Power Level: {{hero.h_power}}
+        </a> 
+        <a class="columns" (click)="delete(hero)">
+         x
+         </a>   
+    </div>
+</div>
+<div>
+  <label for="new-hero">Hero name:</label>
+  <input id="new-hero" #heroName/>
+
+  <button type="button" class="add-button" (click)="add(heroName.value);heroName.value=''">Add Hero</button>
+</div>
