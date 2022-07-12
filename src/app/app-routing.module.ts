@@ -6,6 +6,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { VilliansComponent } from './villians/villians.component';
 import { VillianDetailComponent } from './villian-detail/villian-detail.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'villians', component: VilliansComponent},
-  { path: 'villiandetail/:id',component: VillianDetailComponent}
+  { path: 'villiandetail/:id',component: VillianDetailComponent},
+  { path: 'test',component: TestComponent}
+
 ];
 
 @NgModule({

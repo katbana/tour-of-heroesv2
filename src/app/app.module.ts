@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { VilliansComponent } from './villians/villians.component';
 import { VillianDetailComponent } from './villian-detail/villian-detail.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { VillianDetailComponent } from './villian-detail/villian-detail.componen
     MessageComponent,
     HeroSearchComponent,
     VilliansComponent,
-    VillianDetailComponent
+    VillianDetailComponent,
+    TestComponent
   ],
   bootstrap: [ AppComponent ]
 })

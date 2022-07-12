@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
   relations: Relation[] = [];
   CombinedObjects: CombinedObjects | undefined;
   _hero: Hero | undefined;
+  name : string = 'Katleho Maloka the G';
 
   constructor(private heroService: HeroService,
               private villianService: VillianService,
